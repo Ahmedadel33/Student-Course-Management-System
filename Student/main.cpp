@@ -5,14 +5,10 @@
 #include "Student.h"
 using namespace std;
 
-// ==================
-// «·„ €Ì—«  «·—∆Ì”Ì…
-// ==================
+
 vector<Student> students;
 
-// ==================
-// 1. Add Student
-// ==================
+
 void addStudent() {
     int id;
     string name;
@@ -21,7 +17,6 @@ void addStudent() {
     cout << "Enter Student ID: ";
     cin >> id;
 
-    // «· Õﬁﬁ „‰ ID „ﬂ——‘
     for (int i = 0; i < students.size(); i++) {
         if (students[i].getId() == id) {
             cout << "ID already exists!\n";
@@ -36,7 +31,6 @@ void addStudent() {
     cout << "Enter GPA (0.0 - 4.0): ";
     cin >> gpa;
 
-    // «· Õﬁﬁ „‰ GPA
     if (gpa < 0.0 || gpa > 4.0) {
         cout << "Invalid GPA!\n";
         return;
@@ -46,9 +40,7 @@ void addStudent() {
     cout << "Student added successfully.\n";
 }
 
-// ==================
-// 2. Remove Student
-// ==================
+
 void removeStudent() {
     int id;
     cout << "Enter Student ID to remove: ";
@@ -66,9 +58,7 @@ void removeStudent() {
     }
 }
 
-// ==================
-// 3. Search Student
-// ==================
+
 void searchStudent() {
     int id;
     cout << "Enter Student ID to search: ";
@@ -85,9 +75,7 @@ void searchStudent() {
     }
 }
 
-// ==================
-// 4. Display All
-// ==================
+
 void displayAll() {
     if (students.empty()) {
         cout << "No students found!\n";
@@ -99,9 +87,7 @@ void displayAll() {
     }
 }
 
-// ==================
-// 5. Enroll in Course
-// ==================
+
 void enrollCourse() {
     int id;
     string course;
@@ -130,9 +116,7 @@ void enrollCourse() {
     }
 }
 
-// ==================
-// 6. Show Courses
-// ==================
+
 void showCourses() {
     int id;
     cout << "Enter Student ID: ";
@@ -158,9 +142,7 @@ void showCourses() {
     }
 }
 
-// ==================
-// 7. Sort by GPA
-// ==================
+
 void sortByGpa() {
     sort(students.begin(), students.end(),
         [](Student& a, Student& b) {
@@ -173,9 +155,7 @@ void sortByGpa() {
     }
 }
 
-// ==================
-// Main Menu
-// ==================
+
 int main() {
     int choice;
 
