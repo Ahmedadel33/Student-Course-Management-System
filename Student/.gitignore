@@ -1,5 +1,9 @@
 .vs/
-bin/
-obj/
-.nuget/
-packages/
+x64/
+Debug/
+Release/
+*.obj
+*.log
+*.tlog
+*.pdb
+*.ilk
